@@ -64,8 +64,8 @@ function guess(card1, card2) {
 }
 
 function playGame() {
-  let unshuffled = shuffle();
-  let deck=shuffle(unshuffled)
+  let unshuffled = buildDeck();
+  let deck = shuffle(unshuffled);
   let playerName = readlineSync.question(
     'Welcome friend.  Lemme get that name.'
   );
@@ -86,4 +86,5 @@ function playGame() {
     ? console.log(`you've won sweetie`)
     : console.log(`You lost dumdum`);
 }
-playGame()
+
+playGame();
