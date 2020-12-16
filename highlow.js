@@ -86,4 +86,4 @@ function playGame() {
     ? console.log(`you've won sweetie`)
     : console.log(`You lost dumdum`);
 }
-playGame();
+playGame()
