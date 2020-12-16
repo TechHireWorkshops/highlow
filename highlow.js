@@ -51,7 +51,7 @@ function compare(card1, card2) {
 function guess(card1, card2) {
   console.log(`The current card is the ${card1.rank} of ${card1.suit}`);
   let input = readlineSync.question(
-    `Will the next card be higher (h) or lower (l)?`
+    `Will the next card be higher (h) or lower (l)? `
   );
   if (input === 'h') {
     return compare(card1, card2) < 0;
@@ -64,10 +64,10 @@ function guess(card1, card2) {
 }
 
 function playGame() {
-  let unshuffled = shuffle();
-  let deck=shuffle(unshuffled)
+  let unshuffled = buildDeck();
+  let deck=shuffle(unshuffled);
   let playerName = readlineSync.question(
-    'Welcome friend.  Lemme get that name.'
+    'Welcome friend.  Lemme get that name. '
   );
   let score = 0;
   let currentCard = deck.pop();
@@ -83,7 +83,7 @@ function playGame() {
     currentCard = nextCard;
   }
   deck.length > 0
-    ? console.log(`you've won sweetie`)
+    ? console.log(`You've won sweetie`)
     : console.log(`You lost dumdum`);
 }
 playGame()
